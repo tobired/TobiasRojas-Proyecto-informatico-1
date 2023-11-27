@@ -1,0 +1,33 @@
+// C++ code 
+// 
+int x = 10; 
+bool val; 
+void setup() 
+{
+  pinMode(11, OUTPUT); 
+  pinMode(10, OUTPUT); 
+  pinMode(12, OUTPUT); 
+  pinMode(13, INPUT); 
+}
+
+void loop()
+{
+  
+  val=digitalRead(13);
+  if (val == !HIGH){ 
+    
+	digitalWrite(12, 0); 
+	digitalWrite(11, 0); 
+	digitalWrite(10, 0); 
+	x=x+1; 
+	if (x>12) 
+	x=10; 
+    delay(500); 
+  }else{
+    digitalWrite(x, 1); 
+  }
+    
+    
+
+
+}

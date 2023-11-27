@@ -1,0 +1,17 @@
+
+int val; 
+
+void setup() 
+{
+  
+  pinMode(3, OUTPUT); 
+  pinMode(A0, INPUT); 
+  
+} 
+void loop() 
+{ 
+  
+  val = analogRead(A0); 
+  int valor = map( val, 0 , 1024 , 0 , 255 );
+  analogWrite(3, valor); 
+}

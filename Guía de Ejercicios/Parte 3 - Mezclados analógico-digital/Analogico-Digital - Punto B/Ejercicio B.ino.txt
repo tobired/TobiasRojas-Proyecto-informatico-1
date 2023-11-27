@@ -1,0 +1,56 @@
+
+#define pot A0 
+#define red 11 
+#define blue 10 
+#define green 9 
+#define bot 13 
+int pott;
+bool apretado; 
+
+
+
+void setup() 
+{
+  pinMode(pot, INPUT);
+  pinMode(red, OUTPUT);
+  pinMode(green, OUTPUT); 
+  pinMode(blue, OUTPUT); 
+  pinMode(bot, OUTPUT); 
+}
+
+void loop() 
+{
+  
+  bool poT = digitalRead(bot); 
+  if (poT == HIGH){
+    apretado = !apretado; 
+    delay(200); 
+  }
+  while (apretado == 1){
+	poT = digitalRead(bot); 
+	if (poT == HIGH){
+	  apretado = !apretado; 
+	  delay(200); 
+    }
+    
+    int var = analogRead(pot); 
+    int pR = map (var, 0, 1024, 0, 255);
+    int pG = map (var, 0, 1024, 100, 200);
+    int pB = map (var, 0, 1024, 0, 50);
+    analogWrite (red, pR); 
+    analogWrite (blue, pB); 
+    analogWrite (green, pG); 
+  }
+  
+  analogWrite (red, 0); 
+  analogWrite (blue, 0); 
+  analogWrite (green, 0); 
+}
+
+
+
+
+  
+    
+
+    
