@@ -1,0 +1,91 @@
+#define verde  3
+#define azul   4 
+#define rojo   5
+#define verde2 11
+#define azul2  12
+#define rojo2  13
+
+
+void setup()
+{
+  
+  pinMode(verde  , OUTPUT);
+  pinMode(azul   , OUTPUT);
+  pinMode(rojo   , OUTPUT);
+  pinMode(verde2 , OUTPUT);
+  pinMode(azul2  , OUTPUT);
+  pinMode(rojo2  , OUTPUT);
+  
+}
+
+void loop()
+{
+   
+  digitalWrite(rojo  , HIGH);
+  digitalWrite(verde , LOW);
+  digitalWrite(azul  , LOW);
+  delay(500);
+  digitalWrite(rojo  ,LOW);
+  digitalWrite(verde ,HIGH);
+  digitalWrite(azul  ,HIGH);
+  delay(500);
+  digitalWrite(verde , HIGH);
+  digitalWrite(rojo  , LOW);
+  digitalWrite(azul  , LOW);
+  delay(500);
+  digitalWrite(azul  , HIGH);
+  digitalWrite(rojo  , HIGH);
+  digitalWrite(verde , LOW);
+  delay(500);
+  digitalWrite(azul  , HIGH);
+  digitalWrite(verde , LOW);
+  digitalWrite(rojo  , LOW);
+  delay(500);
+  digitalWrite(rojo  , HIGH);
+  digitalWrite(verde , HIGH);
+  digitalWrite(azul  , HIGH);
+  delay(500);
+  digitalWrite(rojo  , HIGH);
+  digitalWrite(verde , HIGH);
+  digitalWrite(azul  , LOW);
+  delay(500);
+  digitalWrite(rojo  , LOW);
+  digitalWrite(verde , LOW);
+  digitalWrite(azul  , LOW);
+  
+  //Segundo LED RGB
+  
+  digitalWrite(rojo2  , HIGH);
+  digitalWrite(verde2 , LOW);
+  digitalWrite(azul2  , LOW);
+  delay(500);
+  digitalWrite(rojo2  ,LOW);
+  digitalWrite(verde2 ,HIGH);
+  digitalWrite(azul2  ,HIGH);
+  delay(500);
+  digitalWrite(verde2 , HIGH);
+  digitalWrite(rojo2  , LOW);
+  digitalWrite(azul2  , LOW);
+  delay(500);
+  digitalWrite(azul2  , HIGH);
+  digitalWrite(rojo2  , HIGH);
+  digitalWrite(verde2 , LOW);
+  delay(500);
+  digitalWrite(azul2  , HIGH);
+  digitalWrite(verde2 , LOW);
+  digitalWrite(rojo2  , LOW);
+  delay(500);
+  digitalWrite(rojo2  , HIGH);
+  digitalWrite(verde2 , HIGH);
+  digitalWrite(azul2  , HIGH);
+  delay(500);
+  digitalWrite(rojo2  , HIGH);
+  digitalWrite(verde2 , HIGH);
+  digitalWrite(azul2  , LOW);
+  delay(500);
+  digitalWrite(rojo2  , LOW);
+  digitalWrite(verde2 , LOW);
+  digitalWrite(azul2  , LOW);
+  
+  
+}

@@ -1,0 +1,48 @@
+
+int x = 13; 
+int val; 
+int i = 255; 
+
+void setup() 
+{
+  pinMode(13, OUTPUT); 
+  pinMode(12, OUTPUT); 
+  pinMode(11, OUTPUT); 
+  pinMode(10, OUTPUT); 
+  pinMode(9, OUTPUT); 
+  pinMode(8, OUTPUT); 
+  pinMode(7, OUTPUT); 
+  pinMode(6, OUTPUT); 
+  pinMode(5, OUTPUT); 
+  pinMode(3, OUTPUT);  
+  pinMode(A0, INPUT); 
+}
+
+void loop() 
+{
+  val=analogRead(A0); 
+  int vall = map( val, 0 , 1024 , 100 , 5000 );
+  
+  analogWrite(x, i);
+  delay(vall); 
+  x=x-1; 
+  if (x<3){
+    x=13; 
+    if (i==0){
+      i=255; 
+	}
+    else{
+      i=0; 
+    }
+  }
+  
+  else if(x==6 && i==255){
+    i=100; 
+  }
+  
+}
+
+
+
+
+

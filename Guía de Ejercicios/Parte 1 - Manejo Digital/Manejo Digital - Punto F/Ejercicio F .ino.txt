@@ -1,0 +1,31 @@
+bool boton;
+
+void setup()
+{
+  
+  pinMode(2 ,  INPUT);
+  pinMode(4 , OUTPUT);
+  
+}
+
+void loop()
+{
+ 
+  boton = digitalRead( 2 );
+  delay(1);
+  
+  if( boton == !HIGH )
+  {
+    tone(4 , 1500 , 100);
+    delay(100);
+    
+
+  } else {
+    
+   noTone(4);
+   delay(100);
+    
+  }//FIN IF
+  
+    
+}//FIN LOOP

@@ -1,0 +1,38 @@
+
+int R = 0;
+int G = 0;
+int B = 0; 
+int valorR;
+int valorG; 
+int valorB; 
+
+void setup()
+{
+  pinMode(3 , OUTPUT);
+  pinMode(5 , OUTPUT);
+  pinMode(6 , OUTPUT);
+  
+  pinMode(A0 , INPUT);
+  pinMode(A1 , INPUT);
+  pinMode(A2 , INPUT);
+  
+}
+
+void loop()
+{
+  
+  valorR=analogRead(A0);
+  R = map(valorR, 0, 1024 , 0, 255);
+  analogWrite(3 , R);
+
+  valorG=analogRead(A1);
+  G = map(valorG, 0, 1024 , 0, 255);
+  analogWrite(6 , G);
+
+  valorB=analogRead(A2);
+  B = map(valorB, 0, 1024 , 0, 255);
+  analogWrite(5 , B);
+  
+  
+  
+}
